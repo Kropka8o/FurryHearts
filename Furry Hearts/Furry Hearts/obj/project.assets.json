@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kropk\\source\\repos\\Furry Hearts\\Furry Hearts\\Furry Hearts.csproj",
+      "projectUniqueName": "C:\\Users\\Kropk\\source\\repos\\FurryHearts\\Furry Hearts\\Furry Hearts\\Furry Hearts.csproj",
       "projectName": "Furry Hearts",
-      "projectPath": "C:\\Users\\Kropk\\source\\repos\\Furry Hearts\\Furry Hearts\\Furry Hearts.csproj",
+      "projectPath": "C:\\Users\\Kropk\\source\\repos\\FurryHearts\\Furry Hearts\\Furry Hearts\\Furry Hearts.csproj",
       "packagesPath": "C:\\Users\\Kropk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kropk\\source\\repos\\Furry Hearts\\Furry Hearts\\obj\\",
+      "outputPath": "C:\\Users\\Kropk\\source\\repos\\FurryHearts\\Furry Hearts\\Furry Hearts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
