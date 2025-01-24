@@ -11,11 +11,13 @@ namespace Furry_Hearts
         public string Description { get; set; }
         public List<Scene> Scenes;
         public int currentSceneIndex;
+        private Game gameInstance;
 
-        public Chapter(List<Scene> scenes)
+        public Chapter(List<Scene> scenes, Game game)
         {
             this.Scenes = scenes;
             currentSceneIndex = 0;
+            this.gameInstance = game;
         }
 
         public void Start()
@@ -36,9 +38,12 @@ namespace Furry_Hearts
             else
             {
                 Console.ReadLine();
-                Console.Clear();
-                CenterText.CenterTextHorizontally("The End");
-                Console.ReadLine();
+                Console.Clear(); 
+                bool endingDisplayed = Ending.DisplayEnding(gameInstance.endings, gameInstance.loveMeter);
+                if (endingDisplayed)
+                {
+                    gameInstance.SetState(GameState.MainMenu); // Update game state to MainMenu
+                }
             }
 
         }

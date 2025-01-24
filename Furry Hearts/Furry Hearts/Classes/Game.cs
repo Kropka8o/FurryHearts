@@ -11,15 +11,14 @@ namespace Furry_Hearts
         StartGame,
         HowToPlay,
         ExitGame
-        // Add more states as needed
     }
 
     public class Game
     {
         private GameState currentState;
         private Chapter currentChapter;
-        private int loveMeter;
-        private List<Ending> endings;
+        public int loveMeter;
+        public List<Ending> endings;
 
 
         public Game()
@@ -28,6 +27,7 @@ namespace Furry_Hearts
             loveMeter = 0;
             InitializeEndings();
         }
+
         private void InitializeEndings()
         {
             endings = new List<Ending>
@@ -142,7 +142,7 @@ namespace Furry_Hearts
         new Scene("You are walking in the park and you see a lost puppy. What do you do?", choices2)
     };
 
-            currentChapter = new Chapter(scenes)
+            currentChapter = new Chapter(scenes, this)
             {
                 Title = "Intro",
                 Description = "This is the introduction chapter.",
@@ -159,6 +159,11 @@ namespace Furry_Hearts
             // Add instructions here
             Console.ReadLine();
             currentState = GameState.MainMenu;
+        }
+
+        public void SetState(GameState newState)
+        {
+            currentState = newState;
         }
     }
 }
