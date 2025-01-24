@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Furry Hearts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+510b6452fd9799bd4c996e1da857f685964b472a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Furry Hearts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Furry Hearts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
