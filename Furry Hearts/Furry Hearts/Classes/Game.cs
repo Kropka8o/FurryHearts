@@ -108,14 +108,14 @@ namespace Furry_Hearts
                 new Choice("Continue", 10, () =>
                 {
                     CenterText.CenterTextHorizontally("You chose to continue.");
-                    loveMeter += 10;
+                    loveMeter += 100;
                     currentChapter.NextScene();
                 })
             };
 
             var choices2 = new List<Choice>
             {
-                new Choice("Pet the puppy", 10, () =>
+                new Choice("Pet the puppy", 100, () =>
                 {
                     Console.Clear();
                     string[] description = {
