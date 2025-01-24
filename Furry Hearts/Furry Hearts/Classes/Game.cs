@@ -53,7 +53,6 @@ namespace Furry_Hearts
                     case GameState.HowToPlay:
                         ShowHowToPlay();
                         break;
-                        // Add more cases as needed
                 }
             }
         }
@@ -95,52 +94,50 @@ namespace Furry_Hearts
                     currentState = GameState.ExitGame;
                     break;
                 default:
-                    Console.Clear();
-                    CenterText.CenterTextHorizontally("Invalid choice. Please try again.");
+                    CenterText.CenterTextHorizontally("Invalid choice. Please choose a number.");
+                    Thread.Sleep(800);
                     break;
             }
         }
 
         private void StartGame()
         {
-            Console.Clear();
-            CenterText.CenterTextHorizontally("Starting game...");
 
             var choices = new List<Choice>
-    {
-        new Choice("Continue", 10, () =>
-        {
-            CenterText.CenterTextHorizontally("You chose to continue.");
-            loveMeter += 10;
-            currentChapter.NextScene();
-        })
-    };
+            {
+                new Choice("Continue", 10, () =>
+                {
+                    CenterText.CenterTextHorizontally("You chose to continue.");
+                    loveMeter += 10;
+                    currentChapter.NextScene();
+                })
+            };
 
             var choices2 = new List<Choice>
-    {
-        new Choice("Pet the puppy", 10, () =>
-        {
-            Console.Clear();
-            string[] description = {
-                "The puppy wags its tail happily and licks your hand.",
-                "You feel a warm fuzzy feeling in your heart."
+            {
+                new Choice("Pet the puppy", 10, () =>
+                {
+                    Console.Clear();
+                    string[] description = {
+                        "The puppy wags its tail happily and licks your hand.",
+                        "You feel a warm fuzzy feeling in your heart."
+                    };
+                    CenterText.CenterTextBoth(description);
+                    loveMeter += 10;
+                    currentChapter.NextScene();
+                }),
+                new Choice("Ignore the puppy", 0, () =>
+                {
+                    CenterText.CenterTextHorizontally("You chose to ignore the puppy.");
+                    currentChapter.NextScene();
+                })
             };
-            CenterText.CenterTextBoth(description);
-            loveMeter += 10;
-            currentChapter.NextScene();
-        }),
-        new Choice("Ignore the puppy", 0, () =>
-        {
-            CenterText.CenterTextHorizontally("You chose to ignore the puppy.");
-            currentChapter.NextScene();
-        })
-    };
 
             var scenes = new List<Scene>
-    {
-        new Scene("This is the start of your story.", choices),
-        new Scene("You are walking in the park and you see a lost puppy. What do you do?", choices2)
-    };
+            {
+                new Scene("This is the start of your story.", choices),
+                new Scene("You are walking in the park and you see a lost puppy. What do you do?", choices2)
+            };
 
             currentChapter = new Chapter(scenes, this)
             {
@@ -149,14 +146,28 @@ namespace Furry_Hearts
                 Scenes = scenes
             };
 
-            currentChapter.Start(); // Start the chapter to display the scenes
+            currentChapter.Start();
         }
 
         private void ShowHowToPlay()
         {
-            Console.Clear();
-            Console.WriteLine("How to play...");
-            // Add instructions here
+            string[] instructions = new string[]
+            {
+                "Furry Hearts is a text-based game where you make choices to progress through the story.",
+                "You will be presented with a scenario and a list of choices.",
+                "To make a choice, type the number of the choice and press 'Enter'.",
+                "Your choices will affect the outcome of the story and your lovemeter.",
+                "The goal is to reach the highest lovemeter possible to romance Jasper, who is your crush.",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "Press Enter to return to the main menu..."
+            };
+            CenterText.CenterTextBoth(instructions);
             Console.ReadLine();
             currentState = GameState.MainMenu;
         }

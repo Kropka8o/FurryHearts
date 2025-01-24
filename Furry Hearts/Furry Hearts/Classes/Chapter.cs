@@ -42,7 +42,7 @@ namespace Furry_Hearts
                 bool endingDisplayed = Ending.DisplayEnding(gameInstance.endings, gameInstance.loveMeter);
                 if (endingDisplayed)
                 {
-                    gameInstance.SetState(GameState.MainMenu); // Update game state to MainMenu
+                    gameInstance.SetState(GameState.MainMenu);
                 }
             }
 

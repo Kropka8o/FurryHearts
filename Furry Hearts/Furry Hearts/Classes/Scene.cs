@@ -29,15 +29,23 @@ namespace Furry_Hearts
             CenterText.CenterTextBoth(lines.ToArray());
 
             string input = CenterText.CenteredReadLine("Enter your choice: ");
-            int choiceIndex = int.Parse(input) - 1;
-            if (choiceIndex >= 0 && choiceIndex < choices.Count)
+            if (int.TryParse(input, out int choiceIndex))
             {
-                choices[choiceIndex].OnSelect.Invoke();
+                choiceIndex -= 1;
+                if (choiceIndex >= 0 && choiceIndex < choices.Count)
+                {
+                    choices[choiceIndex].OnSelect.Invoke();
+                }
+                else
+                {
+                    CenterText.CenterTextHorizontally("Invalid choice. Please choose a number.");
+                    Thread.Sleep(800);
+                }
             }
             else
             {
-                string error = "Invalid choice. Please try again.";
-                CenterText.CenterTextHorizontally(error);
+                CenterText.CenterTextHorizontally("Invalid choice. Please choose a number.");
+                Thread.Sleep(800);
                 Play();
             }
         }

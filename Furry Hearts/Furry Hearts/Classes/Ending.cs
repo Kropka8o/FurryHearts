@@ -25,7 +25,7 @@ namespace Furry_Hearts.Classes
             Ending ending = endings.FindLast(e => e.IsAchievable(lovePoints));
             if (ending != null)
             {
-                string[] description = {ending.Description };
+                string[] description = { ending.Description };
                 CenterText.CenterTextBoth(description);
             }
             else
@@ -33,7 +33,7 @@ namespace Furry_Hearts.Classes
                 string[] error = { "No ending found." };
                 CenterText.CenterTextBoth(error);
             }
-            string[] text = { 
+            string[] text = {
                 "",
                 "",
                 "",
@@ -51,4 +51,3 @@ namespace Furry_Hearts.Classes
     }
 }
 
-    
