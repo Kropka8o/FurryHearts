@@ -32,9 +32,9 @@ namespace Furry_Hearts
         {
             endings = new List<Ending>
             {
-                new Ending("You lived happily ever after.", 100),
-                new Ending("You had a decent life.", 50),
-                new Ending("You struggled but survived.", 0)
+                new Ending("You had a decent life.", 60),
+                new Ending("You struggled but survived.", 0),
+                new Ending("You lived happily ever after.", 100)
             };
         }
 
@@ -105,17 +105,17 @@ namespace Furry_Hearts
 
             var choices = new List<Choice>
             {
-                new Choice("Continue", 10, () =>
+                new Choice("Continue", 30, () =>
                 {
                     CenterText.CenterTextHorizontally("You chose to continue.");
-                    loveMeter += 100;
+                    loveMeter += 30;
                     currentChapter.NextScene();
                 })
             };
 
             var choices2 = new List<Choice>
             {
-                new Choice("Pet the puppy", 100, () =>
+                new Choice("Pet the puppy", 21, () =>
                 {
                     Console.Clear();
                     string[] description = {
@@ -123,9 +123,10 @@ namespace Furry_Hearts
                         "You feel a warm fuzzy feeling in your heart."
                     };
                     CenterText.CenterTextBoth(description);
-                    loveMeter += 10;
+                    loveMeter += 21;
                     currentChapter.NextScene();
                 }),
+
                 new Choice("Ignore the puppy", 0, () =>
                 {
                     CenterText.CenterTextHorizontally("You chose to ignore the puppy.");

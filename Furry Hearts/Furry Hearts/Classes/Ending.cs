@@ -15,18 +15,21 @@ namespace Furry_Hearts.Classes
             MinLovePoints = minLovePoints;
         }
 
-        public bool IsAchievable(int lovePoints)
+        public bool IsAchievable(int loveMeter)
         {
-            return lovePoints >= MinLovePoints;
+            return loveMeter >= MinLovePoints;
         }
 
-        public static bool DisplayEnding(List<Ending> endings, int lovePoints)
+        public static bool DisplayEnding(List<Ending> endings, int loveMeter)
         {
-            Ending ending = endings.FindLast(e => e.IsAchievable(lovePoints));
+            var sortedEndings = endings.OrderByDescending(e => e.MinLovePoints).ToList();
+
+            Ending ending = sortedEndings.FirstOrDefault(e => e.IsAchievable(loveMeter));
             if (ending != null)
             {
                 string[] description = { ending.Description };
                 CenterText.CenterTextBoth(description);
+                CenterText.CenterTextHorizontally(loveMeter + " love points");
             }
             else
             {
