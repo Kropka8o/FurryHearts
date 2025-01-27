@@ -19,6 +19,7 @@ namespace Furry_Hearts
         private Chapter currentChapter;
         public int loveMeter;
         public List<Ending> endings;
+        public string playerName;
 
 
         public Game()
@@ -102,6 +103,16 @@ namespace Furry_Hearts
 
         private void StartGame()
         {
+            Console.Clear();
+            string[] strings = new string[]
+            {
+                "Welcome to Furry Hearts!",
+                "In this game, you will make choices that will affect the outcome of the story.",
+                "Your goal is to reach the highest lovemeter possible to romance Jasper, who is your crush.",
+                "Let's get started!"
+            };
+            CenterText.CenterTextBoth(strings);
+            playerName = CenterText.CenteredReadLine("What's your name: ");
 
             var choices = new List<Choice>
             {
