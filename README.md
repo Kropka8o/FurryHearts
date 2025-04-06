@@ -1,10 +1,46 @@
-# Conventions
-- The code is in English, so variable, method, etc. names are all in English.
-- Only add comments to explain _why_ code is as it is, _don't_ use them to explain what it does.
-- For local variables and method parameters use ```camelCase```, e.g. myVariable.
-- For method names, class names, properties, events, and public fields use ```PascalCase```, e.g. MyMethod.
-- Use descriptive names, e.g. _not_ str, _but_ playerName.
-- Indentation is 4 spaces, _not tabs_.
-- Braces are on a new line.
-- Use a space after keywords.
-- No trailing comma's.
+# Conventies
+## Inhoud
+- [Code](#code)
+- [Generiek](#generiek)
+- [Naamgevingsconventies](#naamgevingsconventies)
+- [Code Structuur](#code-structuur)
+- [Documentatie](#documentatie)
+
+## Code
+### Generiek
+- De code is in het Engels geschreven, dit betreft alle variabele, methode, klasse, etc. namen en commentaar.
+- Commentaar wordt alleen toegevoegd om uit te leggen _waarom_ code is geschreven zoals het is, _niet_ om uit te leggen wat het doet. (Verwijder dus het commentaar dat AI schrijft!)
+- Gebruik beschrijvende namen, _niet_ str, _maar_ playerName.
+- Indentatie is 4 spaties, _niet_ tabs (kan ingesteld worden in je editor).
+- Accolades worden op de volgende regel geplaatst.
+- _Geen_ trailing comma's.
+### Naamgevingsconventies
+- Lokale variabele volgen camelCase, bijv.:
+  - num.
+  - currentOrder.
+  - firstProduct.
+- Eigenschappen volgen PascalCase, bijv.:
+  - Name.
+  - Username.
+  - MinimumAge.
+- Methodes volgen camelCase, bijv.:
+  - getProduct.
+  - addNumbers.
+  - saveUser.
+- Klassennamen volgen PascalCase, bijv.:
+  - AppDataContext.
+  - Order.
+  - Product.
+- Bestanden volgen dezelfde naamgevingsconventies als de bijbehorende klasse, bijv.:
+    - Order.cs bevat de definitie van de Order-klasse.
+    - Product.cs bevat de definitie van de Product-klasse.
+    - User.cs bevat de definitie van de User-klasse.
+### Code structuur
+- Het projectbestand ([project naam].csproj) bevat de configuratie en afhankelijkheden van het project.
+- Configuratiebestanden: Bestanden zoals App.xaml.cs zorgen voor de algemene instellingen van de applicatie.
+- `Data/` Bevat de DataContext klasse en de `Models/` map.
+- `Models/` Bevat de klassen.
+- `Pages/` Bevat de Pages.
+## Documentatie
+- Documentatie wordt in het Nederlands geschreven, met uitzondering op vaktermen die moeilijk zijn te vertalen.
+- Documenten bevatten de namen van de teamleden, de datum waarop het is geschreven, en een titel.
