@@ -42,5 +42,5 @@
 - `Models/` Bevat de klassen.
 - `Pages/` Bevat de Pages.
 ## Documentatie
-- Documentatie wordt in het Nederlands geschreven, met uitzondering op vaktermen die moeilijk zijn te vertalen.
+- Documentatie wordt in het Nederlands geschreven, met uitzondering op vaktermen die moeilijk zijn te vertalen en velden (bijv. in ERD's) die in de code ook Engelstalig (zullen) zijn.
 - Documenten bevatten de namen van de teamleden, de datum waarop het is geschreven, en een titel.
