@@ -9,6 +9,7 @@
 ## Code
 ### Generiek
 - De code is in het Engels geschreven, dit betreft alle variabele, methode, klasse, etc. namen en commentaar.
+- De output van de app is Nederlandstalig.
 - Commentaar wordt alleen toegevoegd om uit te leggen _waarom_ code is geschreven zoals het is, _niet_ om uit te leggen wat het doet. (Verwijder dus het commentaar dat AI schrijft!)
 - Gebruik beschrijvende namen, _niet_ str, _maar_ playerName.
 - Indentatie is 4 spaties, _niet_ tabs (kan ingesteld worden in je editor).
