@@ -138,11 +138,17 @@ namespace Furry_Hearts
                     currentChapter.NextScene();
                 }),
 
-                new Choice("Ignore the puppy", 0, () =>
+                new Choice("Ignore the puppy", 21, () =>
                 {
-                    CenterText.CenterTextHorizontally("You chose to ignore the puppy.");
+                    Console.Clear();
+                    string[] description = {
+                        "You ignore the puppy and keep walking.",
+                        "You hear his sad whimpering behind you.",
+                    };
+                    CenterText.CenterTextBoth(description);
+                    loveMeter -= 20;
                     currentChapter.NextScene();
-                })
+                }),
             };
 
             var scenes = new List<Scene>
@@ -187,6 +193,7 @@ namespace Furry_Hearts
         public void SetState(GameState newState)
         {
             currentState = newState;
+            loveMeter = 0;
         }
     }
 }
