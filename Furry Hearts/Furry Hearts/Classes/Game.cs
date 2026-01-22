@@ -33,7 +33,7 @@ namespace Furry_Hearts
         {
             endings = new List<Ending>
             {
-                new Ending("You had a decent life.", 60),
+                new Ending("You had a decent life.", 50),
                 new Ending("You struggled but survived.", 0),
                 new Ending("You lived happily ever after.", 100)
             };
@@ -169,6 +169,7 @@ namespace Furry_Hearts
 
         private void ShowHowToPlay()
         {
+            Console.Clear();
             string[] instructions = new string[]
             {
                 "Furry Hearts is a text-based game where you make choices to progress through the story.",
