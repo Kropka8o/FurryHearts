@@ -33,8 +33,9 @@ namespace Furry_Hearts
         {
             endings = new List<Ending>
             {
-                new Ending("You had a decent life.", 50),
-                new Ending("You struggled but survived.", 0),
+                new Ending("You had a decent life.", 0),
+                new Ending("You struggled but survived.", 35),
+                new Ending("You lived happily ever after.", 65),
                 new Ending("You lived happily ever after.", 100)
             };
         }
